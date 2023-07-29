@@ -97,4 +97,9 @@ public abstract class Pessoa implements Serializable {
 		Pessoa other = (Pessoa) obj;
 		return Objects.equals(cpf, other.cpf) && Objects.equals(id, other.id); // Compara se duas pessoas são iguais com base no CPF e ID
 	}
+
+	public Integer getId() {
+		return id;
+		
+	}
 }

@@ -12,7 +12,6 @@ import com.jlara.helpdesk.domain.enums.Perfil;
 import com.jlara.helpdesk.domain.enums.Prioridade;
 import com.jlara.helpdesk.domain.enums.Status;
 import com.jlara.helpdesk.repositories.ChamadoRepository;
-import com.jlara.helpdesk.repositories.ClienteRepository;
 import com.jlara.helpdesk.repositories.PessoaRepository;
 
 @Service
