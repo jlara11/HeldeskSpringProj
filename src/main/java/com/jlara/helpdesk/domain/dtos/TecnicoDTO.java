@@ -10,20 +10,22 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jlara.helpdesk.domain.Tecnico;
 import com.jlara.helpdesk.domain.enums.Perfil;
 
+import jakarta.validation.constraints.NotNull;
+
 
 public class TecnicoDTO implements Serializable {
 		private static final long serialVersionUID =1L;
 		
 		protected Integer id; // Identificador único da pessoa
-
+		@NotNull(message ="O campo NOME é requerido")
 		protected String nome; // Nome da pessoa
 
-		
+		@NotNull(message ="O campo CPF é requerido")
 		protected String cpf; // CPF da pessoa (deve ser único)
 
-		
+		@NotNull(message ="O campo EMAIL é requerido")
 		protected String email; // Endereço de e-mail da pessoa (deve ser único)
-
+		@NotNull(message ="O campo SENHA é requerido")
 		protected String senha; // Senha da pessoa
 
 	
