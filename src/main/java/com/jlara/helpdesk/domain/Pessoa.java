@@ -7,6 +7,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jlara.helpdesk.domain.enums.Perfil;
 
@@ -18,6 +20,10 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Pattern;
+
+
+
 
 @Entity
 public abstract class Pessoa implements Serializable {
@@ -30,7 +36,8 @@ public abstract class Pessoa implements Serializable {
 	protected Integer id; // Identificador único da pessoa
 
 	protected String nome; // Nome da pessoa
-
+	
+	@Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}", message = "CPF inválido")
 	@Column(unique = true)
 	protected String cpf; // CPF da pessoa (deve ser único)
 

@@ -19,7 +19,7 @@ public class TecnicoDTO implements Serializable {
 		protected Integer id; // Identificador único da pessoa
 		@NotNull(message ="O campo NOME é requerido")
 		protected String nome; // Nome da pessoa
-
+	
 		@NotNull(message ="O campo CPF é requerido")
 		protected String cpf; // CPF da pessoa (deve ser único)
 
