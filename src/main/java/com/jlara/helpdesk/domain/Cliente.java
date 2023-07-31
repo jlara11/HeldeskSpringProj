@@ -2,7 +2,6 @@ package com.jlara.helpdesk.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jlara.helpdesk.domain.enums.Perfil;
 
@@ -25,6 +24,24 @@ public class Cliente extends Pessoa {
 		super(id, nome, cpf, email, senha);
 		addPerfil(Perfil.CLIENTE);
 	}
+	
+	 public String getNome() {
+	        return this.nome;
+	    }
+
+	    public String getCpf() {
+	        return this.cpf;
+	    }
+
+	    public String getEmail() {
+	        return this.email;
+	    }
+
+	    public String getSenha() {
+	        return this.senha;
+	    }
+
+	
 
 	public List<Chamado> getChamados() {
 		return chamados;
@@ -34,4 +51,10 @@ public class Cliente extends Pessoa {
 		this.chamados = chamados;
 	}
 
+
+
+
+
+
+	
 }
