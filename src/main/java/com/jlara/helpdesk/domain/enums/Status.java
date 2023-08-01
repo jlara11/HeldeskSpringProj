@@ -21,15 +21,15 @@ public enum Status {
         return descricao;
     }
 
-    public static Perfil toEnum(Integer cod) {
+    public static Status toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
-        for (Perfil x : Perfil.values()) {
-            if (cod.equals(x.getCodigo())) {
-                return x;
+        for (Status status : Status.values()) {
+            if (cod.equals(status.getCodigo())) {
+                return status;
             }
         }
-        throw new IllegalArgumentException("Status Invalido");
+        throw new IllegalArgumentException("Status inválido: " + cod);
     }
 }

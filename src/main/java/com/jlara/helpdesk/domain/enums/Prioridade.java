@@ -21,15 +21,15 @@ public enum Prioridade {
         return descricao;
     }
 
-    public static Perfil toEnum(Integer cod) {
+    public static Prioridade toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
-        for (Perfil x : Perfil.values()) {
-            if (cod.equals(x.getCodigo())) {
-                return x;
+        for (Prioridade prioridade : Prioridade.values()) {
+            if (cod.equals(prioridade.getCodigo())) {
+                return prioridade;
             }
         }
-        throw new IllegalArgumentException("Prioridade Invalido");
+        throw new IllegalArgumentException("Prioridade inválida: " + cod);
     }
 }

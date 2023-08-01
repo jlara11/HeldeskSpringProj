@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.jlara.helpdesk.domain.enums.Perfil;
 import com.jlara.helpdesk.domain.enums.Prioridade;
 import com.jlara.helpdesk.domain.enums.Status;
 
@@ -125,6 +126,8 @@ public class Chamado implements Serializable {
 		Chamado other = (Chamado) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
 		
 
 }
